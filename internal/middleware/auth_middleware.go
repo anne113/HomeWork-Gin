@@ -5,10 +5,11 @@ import (
 	"HomeWork-Gin/internal/database"
 	"HomeWork-Gin/internal/models"
 	"errors"
-	"github.com/gin-gonic/gin"
-	"github.com/golang-jwt/jwt/v5"
 	"net/http"
 	"strings"
+
+	"github.com/gin-gonic/gin"
+	"github.com/golang-jwt/jwt/v5"
 )
 
 func extractTokenFromHeader(c *gin.Context) (string, error) {
