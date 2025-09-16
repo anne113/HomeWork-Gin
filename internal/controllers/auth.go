@@ -26,7 +26,7 @@ type LoginPayload struct {
 	Password string `json:"password" binding:"required"`
 }
 
-func iRegister(c *gin.Context) {
+func Register(c *gin.Context) {
 	var payload RegisterPayload
 	if err := c.ShouldBindJSON(&payload); err != nil {
 		utils.JSON(c, http.StatusBadRequest, "invalid payload", nil)
